@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}</style></head><body>
+<title>Paris Home Upload Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Noto+Sans+Telugu:wght@400;600&display=swap">
+<style>
+:root{--bg:#f6f3ee;--surface:#fff;--ink:#15202e;--muted:#5d6673;--line:#dcd6cc;--accent:#c84b27;--accent-ink:#fff;--ok:#2f7a4f;--display:"Instrument Serif",Georgia,serif;--body:"Inter","Noto Sans Telugu",system-ui,sans-serif;--te:"Noto Sans Telugu","Inter",system-ui,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#10161f;--surface:#18212d;--ink:#ece7df;--muted:#9aa3ae;--line:#2b3644;--accent:#e2683f;--accent-ink:#10161f;--ok:#5fbf88;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#10161f;--surface:#18212d;--ink:#ece7df;--muted:#9aa3ae;--line:#2b3644;--accent:#e2683f;--accent-ink:#10161f;--ok:#5fbf88;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+main{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:40px}header{display:flex;flex-direction:column;gap:10px}.eyebrow{font:600 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}h1{font:400 clamp(38px,7vw,56px)/1.02 var(--display);margin:0;text-wrap:balance}h1 i{color:var(--accent)}.lede{color:var(--muted);margin:0;max-width:60ch}.meta{display:flex;flex-wrap:wrap;gap:8px}.chip{font:500 13px var(--body);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted);font-variant-numeric:tabular-nums}
+section{display:flex;flex-direction:column;gap:14px}.head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:8px}h2{font:400 30px/1.1 var(--display);margin:0}.step{font:600 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.hint{color:var(--muted);font-size:14px;margin:0}
+.titles{display:flex;flex-direction:column;gap:10px}.title-row{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}.title-row.pick{border-color:var(--accent)}.title-row p{margin:0;flex:1;min-width:0;font:500 16px/1.45 var(--te)}.badge{font:600 11px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:2px}.count{font:500 12px var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.box{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px}.box pre{margin:0;padding:16px;white-space:pre-wrap;word-break:break-word;font:15px/1.6 var(--te);min-width:0;max-height:440px;overflow:auto}.box-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;border-top:1px solid var(--line)}
+button.copy{font:600 13px var(--body);border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:8px;padding:8px 14px;cursor:pointer;white-space:nowrap;flex:none}button.copy.ghost{background:transparent;color:var(--ink)}button.copy:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}button.copy.done{background:var(--ok);border-color:var(--ok);color:var(--accent-ink)}button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.name{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.name label{font:500 14px var(--body)}.name input{font:15px var(--body);padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);min-width:0;flex:1;max-width:280px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:16px}.tag{font:500 14px var(--te);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:4px 10px}
+.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}.checks li{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}.checks input{width:20px;height:20px;margin-top:2px;accent-color:var(--accent);flex:none}.checks label{flex:1;min-width:0}.checks strong{font-weight:600}.checks span{display:block;color:var(--muted);font-size:14px}.checks li:has(input:checked){opacity:.6}.checks li:has(input:checked) strong{text-decoration:line-through}@media(prefers-reduced-motion:no-preference){button.copy,.checks li{transition:background .15s,opacity .15s}}
+</style>
+<main><header><div class="eyebrow">YouTube upload kit</div><h1>Buying a home in <i>Paris</i></h1><p class="lede">Everything to paste into YouTube Studio for Ravi Babu's video, in the order Studio asks for it. Tap a button to copy.</p><div class="meta"><span class="chip">19:15 · 1080p</span><span class="chip">13 chapters</span><span class="chip">Telugu + English subtitles</span></div></header>
+<section aria-labelledby="t-title"><div class="head"><h2 id="t-title">Title</h2><span class="step">Step 1 · under 100 characters</span></div><div class="titles" id="titles"></div></section>
+<section aria-labelledby="t-desc"><div class="head"><h2 id="t-desc">Description</h2><span class="step">Step 2 · chapters included</span></div><div class="name"><label for="editor">Your name for "Edited by"</label><input id="editor" type="text" placeholder="Your name" autocomplete="name"></div><div class="box"><pre id="desc"></pre><div class="box-bar"><span class="count" id="desc-count"></span><button class="copy" data-copy="desc">Copy description</button></div></div></section>
+<section aria-labelledby="t-tags"><div class="head"><h2 id="t-tags">Tags</h2><span class="step">Step 3 · Show more → Tags</span></div><div class="box"><div class="tags" id="tags"></div><div class="box-bar"><span class="count" id="tag-count"></span><button class="copy" data-copy="tags">Copy all tags</button></div></div></section>
+<section aria-labelledby="t-set"><div class="head"><h2 id="t-set">Upload settings</h2><span class="step">Step 4 · tick as you go</span></div><p class="hint">Ticks are saved in this browser only.</p><ul class="checks" id="checks"></ul></section></main>
+<script>
+const TITLES=[{text:'పారిస్‌లో ఇల్లు ఎలా కొన్నాను? | A to Z Process | Deposit, Loan, Notary 🇫🇷',pick:true},{text:'Buying a House in Paris as an Indian | పారిస్‌లో మా ఇల్లు | Full Process'},{text:'పారిస్‌లో ఇల్లు కొనాలంటే? Loan, Deposit, Notary Fees | Telugu Vlog'}];
+const DESC=(name)=>`పారిస్‌లో నేను ఇల్లు ఎలా కొన్నాను? 6 సంవత్సరాలు అద్దె ఇంట్లో ఉన్న తర్వాత, ఫ్రాన్స్‌లో సొంత ఇల్లు కొన్న నా పూర్తి అనుభవం: deposit, bank loan, notary fees, offer, keys వరకు A to Z.
+
+How I bought my apartment in Paris as an Indian: the complete A to Z process. What documents you need (visa, CDI, payslips, tax declarations), the bank simulation, where to search (SeLoger, PAP, Leboncoin, Ville Idéale), new vs old homes, the offer, the notary, the 35% loan rule, the deposit, and getting the keys.
+
+⏱️ Chapters
+0:00 Intro
+0:24 Why I decided to buy
+1:37 What you need before you start
+2:44 Start with a bank simulation
+3:54 Where to look for a house
+5:32 New build or old home
+6:05 Visit tips
+7:18 What to ask the agent
+8:36 Making an offer
+10:01 The notary
+12:04 The bank loan and the 35% rule
+15:43 Where the deposit can come from
+16:57 Signing day and the keys
+
+⚠️ This video is my personal experience, not financial or legal advice. Rules, rates and deadlines change. Please check with your bank, your notary and official French sources (service-public.fr) before you decide.
+
+Some scenes are AI reconstructions and are labelled on screen.
+
+🔔 Subscribe for the next video: furniture, real costs after buying, and the benefits and drawbacks of owning a home in Paris.
+
+Edited by ${name||'[your name]'}
+
+#ParisHome #TeluguInFrance #HomeBuyingFrance #TeluguVlogs #ParisLife #IndiansInFrance`;
+const TAGS=['buying a house in paris','buy apartment in paris','paris home buying process','indians in france','telugu in france','telugu vlogs paris','france home loan','home loan in france for foreigners','notary fees france','frais de notaire','35 percent rule france loan','deposit for home loan france','ptz pret a taux zero','seloger','leboncoin','ville ideale','cdi contract france','first time home buyer france','పారిస్ లో ఇల్లు','ఫ్రాన్స్ తెలుగు','paris apartment cost','moving to france from india'];
+const CHECKS=[['video','Upload the video','Ravi-Babu-Paris-final-v3.mp4'],['thumb','Add the thumbnail','Ravi-Babu-Paris-thumbnail.jpg (1280×720)'],['ai','Altered or synthetic content: Yes','Required because some scenes are AI reconstructions'],['srt','Subtitles: upload the SRT as English','Subtitles → Add language → English → Upload file → Ravi-Babu-Paris.srt'],['lang','Video language: Telugu','Show more → Language and captions'],['cat','Category: People & Blogs or Education','Show more → Category'],['kids','Audience: No, it is not made for kids','Audience section'],['comment','Pin a first comment','"What\'s your biggest question about buying a home in France? Ask below, the next video answers them 👇"'],['time','Publish around 6–8 pm India time','That is 2:30–4:30 pm in Paris, good for viewers in both countries']];
+const store={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
+async function copyText(text,btn,label){try{await navigator.clipboard.writeText(text);btn.textContent='Copied';btn.classList.add('done');setTimeout(()=>{btn.textContent=label;btn.classList.remove('done')},1600)}catch{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();btn.textContent='Selected, press Ctrl+C';setTimeout(()=>{ta.remove();btn.textContent=label},4000)}}
+const titles=document.getElementById('titles');TITLES.forEach((t,i)=>{const row=document.createElement('div');row.className='title-row'+(t.pick?' pick':'');const p=document.createElement('p');if(t.pick)p.innerHTML='<span class="badge">Recommended</span>';p.append(t.text);const n=document.createElement('span');n.className='count';n.textContent=[...t.text].length+' chars';const b=document.createElement('button');b.className='copy ghost';b.textContent='Copy';b.addEventListener('click',()=>copyText(t.text,b,'Copy'));row.append(p,n,b);titles.append(row)});
+const editor=document.getElementById('editor');editor.value=store.get('editor','');function renderDesc(){const text=DESC(editor.value.trim());document.getElementById('desc').textContent=text;document.getElementById('desc-count').textContent=[...text].length+' / 5000 characters'}editor.addEventListener('input',()=>{store.set('editor',editor.value);renderDesc()});renderDesc();
+const tagBox=document.getElementById('tags');TAGS.forEach(t=>{const s=document.createElement('span');s.className='tag';s.textContent=t;tagBox.append(s)});const tagText=TAGS.join(', ');document.getElementById('tag-count').textContent=TAGS.length+' tags · '+[...tagText].length+' / 500 characters';
+document.querySelectorAll('button[data-copy]').forEach(b=>{const label=b.textContent;b.addEventListener('click',()=>copyText(b.dataset.copy==='desc'?DESC(editor.value.trim()):tagText,b,label))});
+const done=store.get('checks',{});const list=document.getElementById('checks');CHECKS.forEach(([id,title,note])=>{const li=document.createElement('li');const box=document.createElement('input');box.type='checkbox';box.id='chk-'+id;box.checked=!!done[id];box.addEventListener('change',()=>{done[id]=box.checked;store.set('checks',done)});const label=document.createElement('label');label.htmlFor=box.id;const s=document.createElement('strong');s.textContent=title;const n=document.createElement('span');n.textContent=note;label.append(s,n);li.append(box,label);list.append(li)});
+</script></body></html>
